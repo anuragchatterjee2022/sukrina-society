@@ -1,11 +1,11 @@
-from fpdf import FPDF
+from fpdf import FPDF # Matches fpdf in requirements.txt
 import os
 
 def generate_receipt(name, flat, amount, month):
     pdf = FPDF()
     pdf.add_page()
     
-    # Header
+    # --- Header: Sukrina Co-operative ---
     pdf.set_font("Arial", 'B', 18)
     pdf.cell(200, 15, txt="SUKRINA COOPERATIVE HOUSING LTD.", ln=True, align='C')
     
@@ -13,7 +13,7 @@ def generate_receipt(name, flat, amount, month):
     pdf.cell(200, 10, txt="Official Maintenance Receipt", ln=True, align='C')
     pdf.ln(10)
     
-    # Details
+    # --- Receipt Details ---
     pdf.set_font("Arial", 'B', 12)
     pdf.cell(200, 10, txt=f"Billing Month: {month}", ln=True)
     pdf.line(10, 45, 200, 45)
@@ -29,12 +29,12 @@ def generate_receipt(name, flat, amount, month):
     pdf.set_font("Arial", 'I', 10)
     pdf.cell(200, 10, txt="This is a computer-generated receipt.", ln=True, align='C')
 
-    # Path logic for Vercel (/tmp) vs Local Windows
+    # --- Deployment Path Logic ---
+    # Redirects to /tmp ONLY if running on Vercel
     if os.path.exists("/tmp"):
         filename = f"/tmp/Receipt_{flat}.pdf"
     else:
-        filename = os.path.join(os.getcwd(), f"Receipt_{flat}.pdf")
-
-    # This MUST be outside the if/else to output the file
+        filename = f"Receipt_{flat}.pdf"
+        
     pdf.output(filename)
     return filename

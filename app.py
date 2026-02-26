@@ -92,8 +92,16 @@ def delete_pdf(filename):
 
 @app.route('/pay', methods=['POST'])
 def pay():
-    name, flat, amount = request.form.get('name'), request.form.get('flat'), request.form.get('amount')
+    # Fetching data from the frontend form
+    name = request.form.get('name')
+    flat = request.form.get('flat')
+    amount = request.form.get('amount')
+    
+    # Call the fixed generator
+    # We pass "February 2026" as the default month for this deployment
     pdf_filename = generate_receipt(name, flat, amount, "February 2026")
+    
+    # Send file to user for download
     return send_file(pdf_filename, as_attachment=True)
 
 @app.route('/directory')
