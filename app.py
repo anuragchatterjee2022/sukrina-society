@@ -10,7 +10,7 @@ app.secret_key = "sukrina_secure_key"
 
 # --- CONFIGURATION ---
 # Replace with your actual GitHub token
-GITHUB_TOKEN = "YOUR_GITHUB_TOKEN_HERE" 
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO_NAME = "anuragchatterjee2022/sukrina-society"
 # ---------------------
 

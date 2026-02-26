@@ -1,8 +1,10 @@
-from fpdf2 import FPDF
+from fpdf import FPDF
+import os
 
 def generate_receipt(name, flat, amount, month):
     pdf = FPDF()
     pdf.add_page()
+    
     # Header
     pdf.set_font("Arial", 'B', 18)
     pdf.cell(200, 15, txt="SUKRINA COOPERATIVE HOUSING LTD.", ln=True, align='C')
@@ -21,20 +23,18 @@ def generate_receipt(name, flat, amount, month):
     pdf.cell(200, 10, txt=f"Member Name: {name}", ln=True)
     pdf.cell(200, 10, txt=f"Flat Number: {flat}", ln=True)
     pdf.cell(200, 10, txt=f"Amount Received: Rs. {amount}/-", ln=True)
-    pdf.cell(200, 10, txt=f"Payment Status: SUCCESSFUL", ln=True)
+    pdf.cell(200, 10, txt="Payment Status: SUCCESSFUL", ln=True)
     
     pdf.ln(20)
     pdf.set_font("Arial", 'I', 10)
     pdf.cell(200, 10, txt="This is a computer-generated receipt.", ln=True, align='C')
-    import os
 
-# Define the filename path based on the environment
+    # Path logic for Vercel (/tmp) vs Local Windows
     if os.path.exists("/tmp"):
-     filename = f"/tmp/Receipt_{flat}.pdf"
+        filename = f"/tmp/Receipt_{flat}.pdf"
     else:
-    # Local path for Windows testing in your 'co society' folder
-     filename = os.path.join(os.getcwd(), f"Receipt_{flat}.pdf")
+        filename = os.path.join(os.getcwd(), f"Receipt_{flat}.pdf")
 
-# Move this OUTSIDE the if/else so it always runs
+    # This MUST be outside the if/else to output the file
     pdf.output(filename)
     return filename

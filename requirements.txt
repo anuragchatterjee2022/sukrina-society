@@ -1,4 +1,4 @@
 flask
 flask_sqlalchemy
-fpdf2
+fpdf
 requests
