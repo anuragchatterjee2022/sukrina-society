@@ -1,4 +1,4 @@
-from fpdf2 import FPDF
+from fpdf import FPDF
 
 def generate_receipt(name, flat, amount, month):
     pdf = FPDF()
@@ -28,6 +28,7 @@ def generate_receipt(name, flat, amount, month):
     pdf.set_font("Arial", 'I', 10)
     pdf.cell(200, 10, txt="This is a computer-generated receipt.", ln=True, align='C')
     
-    filename = f"Receipt_{flat}.pdf"
+    # Change from filename = f"Receipt_{flat}.pdf"
+    filename = f"/tmp/Receipt_{flat}.pdf" # Mandatory for Vercel
     pdf.output(filename)
     return filename
