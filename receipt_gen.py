@@ -1,4 +1,4 @@
-from fpdf import FPDF
+from fpdf2 import FPDF
 
 def generate_receipt(name, flat, amount, month):
     pdf = FPDF()
