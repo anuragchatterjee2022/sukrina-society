@@ -592,3 +592,1108 @@ input, select, textarea {
         flex-direction: column; /* Stacks Agree/Disagree buttons */
     }
 }
+/* Admin Control Tile Styling */
+.admin-tile {
+    background: #1a1a1a !important; /* Premium Dark Grey */
+    color: #ffffff;
+    border: 2px solid #FFD700; /* Sukrina Gold Accent */
+}
+
+.admin-tile .card-header {
+    color: #FFD700;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.upload-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.upload-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input Styling for Admin Forms */
+.upload-group input[type="text"], 
+.upload-group input[type="file"] {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Custom Button Styles */
+.btn-yellow {
+    background: #FFD700;
+    color: #000;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background: #e6c200;
+}
+
+/* Dynamic Notice List Styling */
+.notice-area ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notice-area li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.notice-area li::before {
+    content: "📌";
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* Responsive Fix for the Bento Grid */
+@media (max-width: 768px) {
+    .dash-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
+.doc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.doc-item {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 18px 25px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.doc-item:hover {
+    transform: translateY(-3px);
+    border-color: #FFD700;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.doc-item::before {
+    content: "📄";
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+/* Premium Admin Control Tile */
+.admin-tile {
+    background: #1a1a1a !important; /* Matches Navbar/Hero */
+    border: 2px solid #FFD700; /* Sukrina Gold */
+    border-radius: 20px;
+    padding: 25px;
+    color: white;
+}
+
+.admin-tile .card-header {
+    color: #FFD700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Form Groups */
+.upload-group label {
+    display: block;
+    color: #FFD700;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.upload-group input {
+    width: 100%;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Matching Buttons */
+.btn-yellow {
+    background: #FFD700;
+    color: #1a1a1a;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-yellow:hover {
+    background: #e6c200;
+    transform: translateY(-2px);
+}
+
+.btn-outline-admin {
+    background: transparent;
+    border: 1px solid #FFD700;
+    color: #FFD700;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* Premium Admin Tile Styling */
+.admin-tile {
+    background: #1a1a1a !important; /* Dark theme to match hero */
+    border: 2px solid #FFD700; /* Sukrina Gold accent */
+    border-radius: 20px;
+    padding: 25px;
+    color: white;
+}
+
+.admin-tile label {
+    color: #FFD700;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.notice-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.delete-link {
+    color: #ff4d4d;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    background: #fff1f1;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+/* Premium Admin Control Tile */
+.admin-tile {
+    background: #1a1a1a !important; /* Matches Elite Dark Theme */
+    border: 2px solid #FFD700; /* Sukrina Gold Accent */
+    border-radius: 20px;
+    padding: 25px;
+    color: white;
+}
+
+/* Red Delete Link styling for Notice list */
+.delete-link {
+    color: #ff4d4d;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-decoration: none;
+    background: #fff0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.delete-link:hover {
+    background: #ff4d4d;
+    color: white;
+}
+/* Layout for the document link and delete button together */
+.doc-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    margin-bottom: 10px;
+    padding-right: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.doc-item {
+    flex-grow: 1; /* Makes the document link take up most of the space */
+    box-shadow: none !important; /* Removes extra shadow from the individual link */
+}
+
+/* Red Delete Button for PDFs */
+.delete-pdf-btn {
+    color: #ff4d4d;
+    background: #fff5f5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #ffebeb;
+    transition: 0.3s;
+}
+
+.delete-pdf-btn:hover {
+    background: #ff4d4d;
+    color: white;
+}
+/* Smoothly reveal the section after redirection */
+.view {
+    scroll-behavior: smooth;
+}
+
+/* Red Delete Accent for both Notices and PDFs */
+.delete-btn, .delete-pdf-btn {
+    background: #fff5f5;
+    color: #ff4d4d;
+    border: 1px solid #ffebeb;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.delete-btn:hover, .delete-pdf-btn:hover {
+    background: #ff4d4d;
+    color: #ffffff;
+}
+/* Premium Admin Control Tile */
+.admin-tile {
+    background: #1a1a1a !important; /* Matches Navbar and Hero background */
+    border: 2px solid #FFD700; /* Signature Sukrina Gold border */
+    border-radius: 20px;
+    padding: 25px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.admin-tile .card-header {
+    color: #FFD700; /* Gold header text */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Form Labels and Inputs */
+.admin-tile label {
+    color: #FFD700;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.admin-tile input[type="text"], 
+.admin-tile input[type="file"] {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Gold Action Buttons */
+.btn-yellow {
+    background: #FFD700;
+    color: #1a1a1a;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 800;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background: #e6c200;
+    transform: translateY(-2px);
+}
+.resident-link {
+    color: #FFD700; /* Signature Gold */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.resident-link:hover {
+    text-decoration: underline;
+}
+
+/* Highlight the row when hovering in the directory */
+#member-list-body tr:hover {
+    background-color: rgba(255, 215, 0, 0.05);
+}
+/* Elite Profile Card Styling */
+.profile-card {
+    background: #1a1a1a !important; /* Matches Admin Control */
+    border: 2px solid #FFD700; /* Signature Gold */
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+    color: white;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #FFD700;
+    object-fit: cover;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info-item strong {
+    color: #FFD700;
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+/* High-Contrast Resident Links */
+.resident-link {
+    color: #1a4f8b; /* Deep Royal Blue for maximum readability */
+    font-weight: 700;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.resident-link:hover {
+    color: #FFD700; /* Gold only appears on hover as a highlight */
+    background: #1a1a1a; /* Dark background pop on hover */
+    text-decoration: none;
+}
+
+/* Ensure the table row itself feels interactive */
+#member-list-body tr {
+    transition: background 0.2s;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#member-list-body tr:hover {
+    background-color: #f8f9fa; /* Subtle gray highlight */
+}
+/* High-Contrast Directory Styling */
+.directory-card {
+    background: #ffffff; /* Keeping the list area clean and white */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+.resident-link {
+    color: #1a4f8b; /* Deep Royal Blue for high contrast on white */
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.resident-link:hover {
+    color: #FFD700; /* Gold highlight on hover */
+    text-decoration: underline;
+}
+
+/* Admin Control Contrast Update */
+.admin-tile {
+    background: #1a1a1a !important; /* Soft Charcoal instead of Black */
+    border: 2px solid #FFD700;
+    color: #ffffff;
+}
+
+.admin-tile label {
+    color: #FFD700; /* Gold labels for clear visibility */
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* Contrast Button */
+.btn-yellow {
+    background: #FFD700;
+    color: #000000; /* Dark text on yellow for best readability */
+    font-weight: 900;
+    border-radius: 8px;
+    border: none;
+}
+/* High-Contrast Elite Admin Tile */
+.admin-tile {
+    background: linear-gradient(145deg, #7f7777, #232020) !important; /* Midnight Navy Gradient */
+    border: 1.5px solid #d4af37; /* Sophisticated Soft Gold */
+    border-radius: 16px;
+    padding: 25px;
+    color: #f8fafc;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+}
+
+.admin-tile .card-header {
+    color: #d4af37 !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Sophisticated Gold Buttons */
+.btn-yellow {
+    background: #d4af37;
+    color: #0f172a; /* Navy text on gold for premium readability */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background: #f1c40f; /* Brighter highlight on hover */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Input Field Contrast */
+.admin-tile input[type="text"], 
+.admin-tile input[type="file"] {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #e04242;
+    border-radius: 6px;
+}
+.admin-tile label {
+    color: #1e3a8a !important; /* Replaces yellow for better readability */
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Button Refinement */
+.btn-yellow {
+    background: #d4af37 !important; /* Muted Gold instead of bright yellow */
+    color: #ffffff; /* White text for crisp contrast */
+    border: none;
+    font-weight: 700;
+}
+/* Premium High-Contrast Admin Tile */
+.admin-tile {
+    background: #0f172a !important; /* Midnight Navy */
+    border: 2px solid #d4af37; /* Metallic Gold */
+    border-radius: 20px;
+    padding: 25px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.5);
+}
+
+.admin-tile .card-header {
+    color: #d4af37 !important; /* Gold header text */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+/* High-Contrast Labels */
+.admin-tile label {
+    color: #cbd5e1; /* Soft gray-white for clarity */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Metallic Gold Buttons */
+.btn-yellow {
+    background: #989381 !important; 
+    color: #272829 !important; /* Navy text on Gold for best readability */
+    font-weight: 800;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background: #f1c40f !important; /* Brighter gold hover */
+    transform: translateY(-2px);
+}
+/* High-Contrast Clean Frost Admin Tile */
+.admin-tile {
+    background: #f8fafc !important; /* Crisp light gray-white */
+    border: 1px solid #e2e8f0; /* Subtle border for definition */
+    border-top: 4px solid #1e3a8a; /* Navy accent bar for an elite feel */
+    border-radius: 12px;
+    padding: 25px;
+    color: #1e293b; /* Deep slate for text readability */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.admin-tile .card-header {
+    color: #1e3a8a !important; /* Deep Navy header */
+    font-weight: 800;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* Contrast Labels */
+.admin-tile label {
+    color: #1e3a8a !important; 
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Professional Navy Buttons */
+.btn-yellow {
+    background: #1e3a8a !important; /* Replaces yellow with navy for better contrast */
+    color: #ffffff !important; /* White text for maximum clarity */
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background: #172554 !important; /* Darker navy on hover */
+    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
+}
+/* High-Contrast Royal Midnight Admin Tile */
+.admin-tile {
+    background: #0a192f !important; /* Deep Navy base for premium feel */
+    border: 1px solid #d4af37; /* Sophisticated gold border */
+    border-radius: 16px;
+    padding: 25px;
+    color: #ffffff;
+    box-shadow: 0 12px 40px rgba(10, 25, 47, 0.4);
+}
+
+.admin-tile .card-header {
+    color: #f1c40f !important; /* Bright gold for clear heading */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+}
+
+/* Contrast Labels and Inputs */
+.admin-tile label {
+    color: #8892b0 !important; /* Soft steel blue for readable labels */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.admin-tile input[type="text"], 
+.admin-tile input[type="file"] {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #233554;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Muted Gold Action Buttons */
+.btn-yellow {
+    background: #d4af37 !important; /* Premium metallic gold */
+    color: #0a192f !important; /* Navy text for best readability on gold */
+    font-weight: 800;
+    letter-spacing: 1px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-yellow:hover {
+    background: #f1c40f !important; /* Brighter highlight */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+/* Light Frost Admin Theme */
+.light-admin-tile {
+    background: #fdfdfd !important; /* Soft white background */
+    border: 1px solid #e0e6ed;
+    border-top: 4px solid #1e3a8a; /* Navy accent for an elite feel */
+    border-radius: 12px;
+    padding: 25px;
+    color: #334155;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.light-admin-tile .card-header {
+    color: #1e3a8a !important; /* Deep Navy heading */
+    font-weight: 800;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.light-admin-tile label {
+    color: #475569 !important; /* Slate gray for readable labels */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 20px 0;
+}
+
+/* High-Contrast Navy Button */
+.btn-navy {
+    background: #1e3a8a !important; 
+    color: #ffffff !important; /* White text for crisp readability */
+    font-weight: 700;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-navy:hover {
+    background: #1e40af !important;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+}
+/* Isolated Admin Contrast Theme */
+.admin-tile-contrast {
+    background: #0f172a !important; /* Midnight Navy */
+    border: 1.5px solid #d4af37; /* Soft Gold Border */
+    border-radius: 16px;
+    padding: 25px;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.5);
+}
+
+.admin-tile-contrast .card-header {
+    color: #d4af37 !important; /* Gold Heading */
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    padding-bottom: 10px;
+}
+
+.admin-tile-contrast label {
+    color: #94a3b8 !important; /* High-contrast steel gray for labels */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.card-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 25px 0;
+}
+
+/* Gold Action Button */
+.btn-contrast {
+    background: #453501 !important; 
+    color: #0f172a !important; /* Dark navy text on gold for clarity */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-contrast:hover {
+    background: #f1c40f !important; /* Brighter gold on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+/* Premium Obsidian & Silver Theme */
+.premium-admin-tile {
+    background: linear-gradient(145deg, #0f172a, #1e293b) !important; /* Deep Obsidian Gradient */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    color: #f8fafc;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.premium-admin-tile .card-header {
+    color: #ffffff !important;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    border-left: 4px solid #f8fafc; /* Silver accent bar */
+    padding-left: 15px;
+}
+
+.premium-admin-tile label {
+    color: #94a3b8 !important; /* Muted slate for readable labels */
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.premium-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin: 30px 0;
+}
+
+/* Metallic Silver Action Button */
+.btn-premium {
+    background: #f8fafc !important; /* Bright Silver/White for peak contrast */
+    color: #0f172a !important; /* Obsidian text for sharp readability */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-premium:hover {
+    background: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}   
+/* Premium Executive Theme - High Contrast */
+#admin-card.dash-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+    color: #f8fafc !important;
+    padding: 30px !important;
+}
+
+#admin-card .card-header {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    border-left: 5px solid #f8fafc !important; /* Silver Accent */
+    padding-left: 15px !important;
+    margin-bottom: 25px !important;
+}
+
+#admin-card label {
+    color: #94a3b8 !important; /* Slate Gray Labels */
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+/* Metallic Silver Button - High Contrast */
+#admin-card .btn-premium {
+    background: #f8fafc !important; /* Bright Silver */
+    color: #0f172a !important; /* Obsidian Text */
+    border: none !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    transition: 0.3s ease-in-out !important;
+}
+
+#admin-card .btn-premium:hover {
+    background: #ffffff !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1) !important;
+}
+/* High-Contrast White & Blue Executive Theme */
+#admin-card.dash-card {
+    background: #ffffff !important; /* Pure White background */
+    border: 1px solid #e2e8f0 !important;
+    border-top: 5px solid #1e3a8a !important; /* Deep Navy accent bar */
+    border-radius: 16px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+    color: #1e293b !important; /* Dark Slate text */
+    padding: 30px !important;
+}
+
+#admin-card .card-header {
+    color: #1e3a8a !important; /* Navy Blue Header */
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    border-bottom: 2px solid #f1f5f9 !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+}
+
+#admin-card label {
+    color: #475569 !important; /* Steel Blue Labels */
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+/* Deep Navy Action Button */
+#admin-card .btn-premium {
+    background: #1e3a8a !important; /* Deep Navy */
+    color: #ffffff !important; /* White Text for maximum contrast */
+    border: none !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    padding: 14px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    transition: background 0.3s ease !important;
+}
+
+#admin-card .btn-premium:hover {
+    background: #1e40af !important; /* Brighter blue on hover */
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2) !important;
+}
+/* High-Contrast Royal Blue & White Theme */
+#admin-card.dash-card {
+    background: #ffffff !important; /* Pure White background */
+    border: 1px solid #d1d5db !important;
+    border-top: 5px solid #ffffff !important; /* Royal Blue accent bar */
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 35, 102, 0.1) !important;
+    color: #111827 !important; /* High-contrast dark text */
+    padding: 30px !important;
+}
+
+#admin-card .card-header {
+    color: #002366 !important; /* Royal Blue Header */
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    border-bottom: 2px solid #e5e7eb !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 12px !important;
+}
+
+#admin-card label {
+    color: #002366 !important; /* Royal Blue Labels for clarity */
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+/* Royal Blue Action Button */
+#admin-card .btn-premium {
+    background: #002366 !important; /* Royal Blue */
+    color: #ffffff !important; /* White Text for peak contrast */
+    border: none !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    transition: all 0.3s ease !important;
+}
+
+#admin-card .btn-premium:hover {
+    background: #003399 !important; /* Slightly lighter Royal Blue on hover */
+    box-shadow: 0 6px 15px rgba(0, 35, 102, 0.2) !important;
+    transform: translateY(-2px);
+}
+/* Professional Executive Profile Card */
+.executive-card {
+    background: #ffffff !important; /* Pure White Card */
+    border-radius: 20px !important;
+    box-shadow: 0 15px 40px rgba(0, 35, 102, 0.1) !important;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 1px solid #e5e7eb;
+}
+
+.card-top-accent {
+    height: 8px;
+    background: #002366; /* Royal Blue Accent */
+}
+
+.profile-main {
+    text-align: center;
+    padding: 40px 20px 30px;
+    background: #f8fafc; /* Subtle light gray background for header */
+}
+
+.avatar-wrapper {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.executive-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.executive-name {
+    color: #1e293b;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.executive-badge {
+    background: #1e293b; /* Dark charcoal badge */
+    color: #ffd700; /* Gold text highlight */
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Premium Info Grid */
+.info-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2px; /* Creates the separator effect */
+    background: #e2e8f0; /* Color of the separators */
+    border-top: 1px solid #e2e8f0;
+}
+
+.info-block {
+    background: #ffffff;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.info-block label {
+    display: block;
+    color: #002366; /* Royal Blue Labels */
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.info-block p {
+    color: #475569; /* Soft Slate Gray for details */
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+/* High-Contrast Executive Font Colors */
+
+/* The 'Titles' (Full Name, Flat No, etc.) */
+.info-block label {
+    color: #002366 !important; /* Royal Blue: Authoritative and sharp */
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* The 'Actual Details' (The resident's specific info) */
+.info-block p {
+    color: #334155 !important; /* Deep Slate: Much more readable than yellow */
+    font-weight: 600;
+}
+
+/* The Name at the top */
+.executive-name {
+    color: #1e293b !important; /* Near-black for maximum name visibility */
+}
+
+/* The Role Badge */
+.executive-badge {
+    color: #ffd700 !important; /* Keeps the 'Elite' Gold just for the role */
+    background: #1e293b;
+}
+/* FORCE UPDATE: Royal Navy & Slate Contrast */
+
+/* 1. The Field Titles (e.g., FULL NAME, FLAT NO) */
+#profile-view .info-block label {
+    color: #002366 !important; /* Royal Navy */
+    font-weight: 800 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1px !important;
+}
+
+/* 2. The Actual Resident Data (e.g., Kingshuk Dasgupta) */
+#profile-view .info-block p {
+    color: #334155 !important; /* Deep Slate */
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+}
+
+/* 3. The Large Name Heading */
+#profile-view .executive-name {
+    color: #0f172a !important; /* Obsidian Dark */
+    font-weight: 800 !important;
+}
+/* Force Update: Change Yellow to Royal Blue */
+
+
+
+/* 2. Profile Card Labels (FULL NAME, FLAT NO, etc.) */
+#profile-view .info-block label,
+#profile-view .info-item strong {
+    color: #002366 !important; /* Royal Blue for peak visibility */
+}
+
+/* 3. Admin Panel Labels (POST NEW DOCUMENT, etc.) */
+#admin-card label {
+    color: #002366 !important; /* Consistent Royal Blue theme */
+}

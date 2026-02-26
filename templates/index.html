@@ -25,8 +25,8 @@
         <header class="hero">
             <div class="hero-content container">
                 <div class="hero-text">
-                    <h1>SUKRINA CO-OPERATIVE 
-                        <p>HOUSING SOCIETY LTD</h1></p>
+                    <h1>SUKRINA CO-OPERATIVE</h1>
+                    <p>HOUSING SOCIETY LTD</p>
                     <p>📍 Action Area 1, New Town, Kolkata</p>
                     <div class="status-badge">● System Fully Operational</div>
                 </div>
@@ -37,12 +37,47 @@
         </header>
 
         <div class="container dash-grid">
+<section id="admin-card" class="dash-card reveal">
+    <div class="card-header">🛡️ Admin Control</div>
+    
+    <form action="/upload-to-github" method="post" enctype="multipart/form-data">
+        <label>Post New Document (PDF)</label>
+        <input type="file" name="file" accept=".pdf" required 
+               style="display: block; width: 100%; padding: 12px; margin: 12px 0; border: 2px solid #e5e7eb; border-radius: 8px; background: #f9fafb;">
+        <button type="submit" class="btn-premium">Move to Documents</button>
+    </form>
+
+    <div style="height: 1px; background: #e5e7eb; margin: 25px 0;"></div>
+
+    <form action="/add-notice" method="post">
+        <label>Quick Notice Update</label>
+        <input type="text" name="notice" placeholder="Enter notice text here..." required 
+               style="width: 100%; padding: 12px; margin: 12px 0; border: 2px solid #e5e7eb; border-radius: 8px; background: #f9fafb; color: #111827;">
+        <button type="submit" class="btn-premium">Post Notice</button>
+    </form>
+</section>
+
             <section class="dash-card reveal">
                 <div class="card-header">📢 Important Notices</div>
-                <div id="notice-list" class="notice-area"></div>
+               <div id="notice-list" class="notice-area">
+    <ul>
+        {% for notice in notices %}
+        <li class="notice-item">
+            <span>📌 {{ notice.content }}</span>
+            <a href="{{ url_for('delete_notice', id=notice.id) }}" class="delete-link">Delete</a>
+        </li>
+        {% endfor %}
+        
+        {% if not notices %}
+        <li>Maintenance Payment deadline: March 5th.</li>
+        <li>Lift Service in Block B scheduled for Saturday.</li>
+        {% endif %}
+    </ul>
+</div>
             </section>
+
             <section class="dash-card reveal">
-                <div class="card-header">🗳️ Community Poll</div>
+                <div class="card-header">📊 Community Poll</div>
                 <p>Proposal: Install Solar Panels on Terrace?</p>
                 <div id="poll-options">
                     <button class="btn-outline" onclick="castVote('Yes')">Agree</button>
@@ -85,6 +120,29 @@
             </div>
         </div>
     </div>
+    <div id="profile-view" class="view" style="display: none;">
+    <div class="container">
+        <button onclick="showSection('directory-view')" class="btn-outline">← Back to Directory</button>
+        
+        <div class="profile-card reveal admin-tile">
+            <div class="profile-header">
+                <img id="p-photo" src="static/default.png" alt="Profile" class="profile-img">
+                <div class="header-text">
+                    <h1 id="p-display-name">Resident Name</h1>
+                    <p id="p-role" class="gold-text">Role</p>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item"><strong>Full Name:</strong> <span id="p-name"></span></div>
+                <div class="info-item"><strong>Flat No:</strong> <span id="p-flat"></span></div>
+                <div class="info-item"><strong>Phone:</strong> <span id="p-phone"></span></div>
+                <div class="info-item"><strong>Address:</strong> <span id="p-address"></span></div>
+                <div class="info-item"><strong>Nominee:</strong> <span id="p-nominee"></span></div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div id="helpdesk-view" class="view" style="display:none;">
         <div class="container central-card">
@@ -104,62 +162,53 @@
         </div>
     </div>
 
-    <div id="docs-view" class="view" style="display:none;">
-        <div class="container central-card">
-            <div class="dash-card reveal">
-                <div class="card-header">📂 Document Archive</div>
-                <input type="text" id="doc-search" placeholder="Search archive..." onkeyup="filterDocs()">
-                <div id="public-document-list" class="doc-list">
-                    <a href="{{ url_for('static', filename='docs/laws1.pdf') }}" target="_blank" class="doc-item">📄 Society Bylaws</a>
-                    <a href="{{ url_for('static', filename='docs/audit.pdf') }}" target="_blank" class="doc-item">📊 Audit Report 2025</a>
-                    <a href="{{ url_for('static', filename='docs/mom.pdf') }}" target="_blank" class="doc-item">📝 Meeting Minutes</a>
-                </div>
-            </div>
+  <div id="docs-view" class="view" style="display:none;">
+    <div class="container central-card">
+        <div class="dash-card reveal">
+            <div class="card-header">📁 Document Archive</div>
+            <input type="text" id="doc-search" placeholder="Search archive..." onkeyup="filterDocs()">
+            
+   <div id="public-document-list" class="doc-list">
+    {% for file in pdf_files %}
+    <div class="doc-item-container">
+        <a href="{{ url_for('static', filename='docs/' + file) }}" target="_blank" class="doc-item">
+            📄 {{ file.replace('.pdf', '').replace('_', ' ') | title }}
+        </a>
+        <a href="{{ url_for('delete_pdf', filename=file) }}" class="delete-pdf-btn">Delete</a>
+    </div>
+    {% endfor %}
+</div>
         </div>
     </div>
+</div>
 
     <div id="contact-view" class="view" style="display:none;">
         <div class="container central-card">
             <div class="dash-card reveal">
                 <div class="card-header">📍 Contact & Location</div>
                 <div class="contact-details">
-                    <p><strong>SUKRINA CO-OPERATIVE 
-                        HOUSING SOCIETY LTD</strong></p>
+                    <p><strong>SUKRINA CO-OPERATIVE HOUSING SOCIETY LTD</strong></p>
                     <p>Street no: 55, AA Block, Action Area 1, New Town, Kolkata</p>
                     <p>Email: admin@sukrinacoop.com</p>
                     <p>Phone: +91 96470 18272</p>
                 </div>
-                <div class="map-container" style="margin-top:20px;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14736.294103130983!2d88.46115985!3d22.5763529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027535039433d3%3A0xc3485e54d8e75e3!2sNew%20Town%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000" 
-                    width="100%" height="300" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-<div id="profile-view" class="view" style="display: none;">
-    <div class="container">
-        <button onclick="showSection('directory-view')" class="btn-outline">← Back</button>
-        <div class="profile-card reveal">
-            <div class="main-avatar">
-                <img id="p-photo" src="" alt="Profile" class="profile-img">
-            </div>
-            <h1 id="p-display-name"></h1> 
-            
-            <div class="info-grid">
-                <div class="info-item"><strong>Name:</strong> <span id="p-name"></span></div>
-                <div class="info-item"><strong>Role:</strong> <span id="p-role"></span></div>
-                <div class="info-item"><strong>Phone:</strong> <span id="p-phone"></span></div>
-                <div class="info-item"><strong>Address:</strong> <span id="p-address"></span></div>
-                <div class="info-item"><strong>Nominee:</strong> <span id="p-nominee"></span></div>
-                <div class="info-item"><strong>Flat:</strong> <span id="p-flat"></span></div>
-            </div>
-        </div>
-    </div>
+               <div class="map-container" style="border-radius: 12px; overflow: hidden; margin-top: 15px;">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.120536417532!2d88.47648417594514!3d22.57457003254922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027526fb79c109%3A0xee6765f8f5316119!2sSwapanpur%20Co-operative%20Housing%20Society%20(AA-185)!5e0!3m2!1sen!2sin!4v1709000000000!5m2!1sen!2sin" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
 </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Sukrina Cooperative Housing Ltd. | New Town, Kolkata</p>
+            <p>&copy; 2026 Sukrina Cooperative Housing Ltd. | New Town, Kolkata</p>
         </div>
     </footer>
 
